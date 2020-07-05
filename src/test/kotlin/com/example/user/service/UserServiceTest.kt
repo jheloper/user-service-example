@@ -21,9 +21,9 @@ class UserServiceTest {
         val request = RegisterUserRequest(
                 email = email
         )
-        val user = userService.registerUser(request)
+         val result = userService.registerUser(request)
 
-        Assertions.assertNotNull(user)
-        Assertions.assertEquals(email, user.email)
+        Assertions.assertNotNull(result)
+        Assertions.assertEquals(email, result.email)
     }
 }
