@@ -12,8 +12,9 @@ class UserService(
 ) {
 
     fun registerUser(registerUserRequest: RegisterUserRequest): User {
-        return User(
-                email = ""
+        val user = User(
+                email = registerUserRequest.email
         )
+        return userRepository.save(user)
     }
 }
